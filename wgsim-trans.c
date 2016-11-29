@@ -312,7 +312,7 @@ void wgsim_core(FILE *fpout1, FILE *fpout2, const char *fn, int is_hap, uint64_t
             pos = (int)((l - d + 1) * drand48());
             
             if (DEBUG)
-                fprintf(stderr, "seqLength:[%zu], ii:[%llu], ran:[%f], d=[%d], pos:[%d]\n", ks->seq.l, ii, ran, d, pos);
+                fprintf(stderr, "seqLength:[%zu], ii:[%zu], ran:[%f], d=[%d], pos:[%d]\n", ks->seq.l, ii, ran, d, pos);
             
             
             // flip or not
