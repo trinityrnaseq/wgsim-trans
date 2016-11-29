@@ -2,7 +2,7 @@
 
 set -veou pipefail
 
-../wgsim-trans  -r 0 -N 1000 -Z 2 trans.fa left.fq right.fq
+../wgsim-trans  -r 0 -e 0 -N 1000 -Z 2 trans.fa left.fq right.fq
 
 bowtie2-build trans.fa trans.fa
 

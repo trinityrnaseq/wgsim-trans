@@ -363,9 +363,11 @@ void wgsim_core(FILE *fpout1, FILE *fpout2, const char *fn, int is_hap, uint64_t
 				if (k != s[x]) ext_coor[x] = -10;						\
 			} while (0)
 
+            // simulate the read sequences
 			__gen_read(0, pos, ++i);
 			__gen_read(1, pos + d - 1, --i);
-			for (k = 0; k < s[1]; ++k) tmp_seq[1][k] = tmp_seq[1][k] < 4? 3 - tmp_seq[1][k] : 4; // complement
+
+            for (k = 0; k < s[1]; ++k) tmp_seq[1][k] = tmp_seq[1][k] < 4? 3 - tmp_seq[1][k] : 4; // complement
 			if (ext_coor[0] < 0 || ext_coor[1] < 0) { // fail to generate the read(s)
 				--ii;
                 if (DEBUG) 
