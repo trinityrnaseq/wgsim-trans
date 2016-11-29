@@ -312,7 +312,7 @@ void wgsim_core(FILE *fpout1, FILE *fpout2, const char *fn, int is_hap, uint64_t
             pos = (int)((l - d + 1) * drand48());
             
             if (DEBUG)
-                fprintf(stderr, "seqLength:[%zu], ii:[%ld], ran:[%f], d=[%d], pos:[%d]\n", ks->seq.l, ii, ran, d, pos);
+                fprintf(stderr, "seqLength:[%zu], ii:[%llu], ran:[%f], d=[%d], pos:[%d]\n", ks->seq.l, ii, ran, d, pos);
             
             
             // flip or not
@@ -457,7 +457,7 @@ int main(int argc, char *argv[])
 
 	N = 1000000; dist = 500; std_dev = 50;
 	size_l = size_r = 70;
-	while ((c = getopt(argc, argv, "e:d:s:N:1:2:r:R:hX:S:A:")) >= 0) {
+	while ((c = getopt(argc, argv, "e:d:s:N:1:2:r:R:hX:S:A:Z:D")) >= 0) {
 		switch (c) {
 		case 'd': dist = atoi(optarg); break;
 		case 's': std_dev = atoi(optarg); break;
