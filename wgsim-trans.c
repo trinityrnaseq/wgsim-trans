@@ -271,12 +271,14 @@ void wgsim_core(FILE *fpout1, FILE *fpout2, const char *fn, int is_hap, uint64_t
     
 	while ((l = kseq_read(ks)) >= 0) {
 		uint64_t n_pairs = (uint64_t)((long double)l / tot_len * N + 0.5);
-	
+
+        /*
         if (num_tries > max_tries) {
             fprintf(stderr, "ERROR, too many failed attempts to simulate reads");
             exit(3);
         }
-        
+        */
+
         //
         //if (l < dist + 3 * std_dev) {
 		//	fprintf(stderr, "[%s] skip sequence '%s' as it is shorter than %d!\n", __func__, ks->name.s, dist + 3 * std_dev);
